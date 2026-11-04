@@ -68,3 +68,9 @@ Se algo falhar, rode `Diagnostico-PJe.ps1` (botão direito > Executar com PowerS
 - PJeOffice Pro 2.5.16u (Windows x64): https://pje-office.pje.jus.br/pro/pjeoffice-pro-v2.5.16u-windows_x64.exe
 - SHA-256 esperado: `8237999EFF5313607DAF53558B4A0B8F3ABA4DA670C6438EE34EB25120B45BC4`
   (confira com `Get-FileHash .\pjeoffice-pro-v2.5.16u-windows_x64.exe`)
+
+- Driver SafeNet Authentication Client 10.3 (x64): https://portal.trt3.jus.br/internet/servicos/pje/pje-em-casa-1/downloads/arquivos/safenet_authentication_client-x64-10-3.msi
+  SHA-256: `18339FCC96C34225FF8E462908EA109F82487F8CF845B1473B0F7D56AF588CC0` (assinado digitalmente por GlobalSign/Thales — Status Valid)
+  Precisa de administrador: dê duplo clique e aceite o UAC (a instalação silenciosa sem elevação falha com erro 1603).
+  Biblioteca PKCS#11 instalada: `C:\Windows\System32\eTPKCS11.dll`
+- Versão 32 bits do PJeOffice: https://pje-office.pje.jus.br/pro/pjeoffice-pro-v2.5.16u-windows_x32.exe
