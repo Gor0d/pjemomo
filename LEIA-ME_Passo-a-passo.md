@@ -1,6 +1,29 @@
-# Configurar PJe com certificado A3 (token) no notebook
+# Configurar PJe com certificado digital (A1 em arquivo ou A3 em token) no notebook
 
 Pacote montado em 04/11/2026. Fontes: manual oficial do PJeOffice Pro (https://pjeoffice.trf3.jus.br/pjeoffice-pro/docs/userguide.html), TRT3 e orientações dos tribunais. Plano conferido em conjunto com o Codex.
+
+## Qual é o seu certificado?
+- **A1:** é um arquivo `.pfx` ou `.p12` com senha, no computador, validade de 1 ano. **Siga a seção "Caminho A1" abaixo.** Não precisa de token nem de driver.
+- **A3:** fica num token USB ou cartão e pede PIN. **Siga o "Passo a passo A3 (token)".**
+
+## Caminho A1 (arquivo .pfx/.p12)
+1. Instale o **PJeOffice Pro** (seção 2 do passo a passo A3; ignore token e driver). Java vem embutido.
+2. Copie o arquivo `.pfx` para o notebook (pen drive ou outra forma segura) e tenha a senha em mãos.
+3. Duas formas de usar (escolha uma):
+   - **Direto no PJeOffice:** ícone da bandeja > abrir PJeOffice Pro > **Configurar certificado A1** (ou nome parecido no menu) > selecione o `.pfx` > digite a senha.
+   - **Instalando no Windows:** duplo clique no `.pfx` > "Usuário atual" > Avançar > senha > marque a opção de importar > Concluir. O PJeOffice passa a listar o certificado.
+4. Em **Segurança > Sites autorizados**, autorize o domínio do tribunal (pede na primeira vez). Navegador: permitir rede local e pop-ups (seção 4).
+5. Teste: login e assinatura de um ato no PJe.
+
+Cuidados com o A1:
+- O `.pfx` é a chave privada: quem tem o arquivo e a senha assina como você. **Nunca suba para GitHub, zip ou nuvem pública** (o `.gitignore` deste repositório bloqueia `.pfx`, `.p12`, `.key`).
+- Apague cópias enviadas por e-mail/WhatsApp depois de importar.
+- Se o A1 vencer (1 ano), é preciso emitir outro na certificadora e importar o novo.
+- Se a assinatura falhar por cadeia, veja "Certificados raiz" abaixo.
+
+---
+
+# Passo a passo A3 (token)
 
 ## O que você precisa
 1. **PJeOffice Pro 2.5.16u** (x64) — já está na pasta `Instaladores`. O Java vem embutido: **não instale Java separado**.

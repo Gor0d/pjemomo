@@ -1,3 +1,9 @@
 Instaladores/
 Kit-PJe.zip
 *.exe
+*.pfx
+*.p12
+*.key
+*.pem
+*.jks
+diagnostico-pje.txt
